@@ -6,7 +6,7 @@ select
     , answer_count
     , comment_count
     , creation_date as created_at
-    , favourite_count
+    , favorite_count
     , last_activity_date as last_activity_at
     , owner_user_id
     , score

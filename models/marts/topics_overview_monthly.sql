@@ -10,7 +10,7 @@ with
 select
     tag_id,
     tag_name,
-    date_trunc(date(q.created_at), month) as m,
+    date_trunc(date(created_at), month) as m,
     count(distinct question_id) as total_questions,
     count(
         distinct case when accepted_answer_id is not null then question_id end

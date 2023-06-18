@@ -4,8 +4,9 @@ select
     , body
     , comment_count
     , creation_date as created_at
-    , favourite_count
+    , favorite_count
     , owner_user_id
+    , parent_id as parent_question_id
     , score
     , tags
     , view_count

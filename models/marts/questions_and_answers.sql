@@ -1,6 +1,6 @@
 with
     avg_answer_score as (
-        select parent_id as question_id, avg(score) as avg_answer_score
+        select parent_question_id, avg(score) as avg_answer_score
         from {{ ref("int_stack_overflow_answers") }}
         group by 1
     )
@@ -28,4 +28,4 @@ select
 from {{ ref("int_stack_overflow_questions") }} q
 left join
     {{ ref("int_stack_overflow_answers") }} a on q.accepted_answer_id = a.answer_id
-left join avg_answer_score s on s.question_id = q.question_id
+left join avg_answer_score s on s.parent_question_id = q.question_id
