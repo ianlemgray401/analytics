@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: stackoverflow
+    project: bigquery-public-data
+    tables:
+      - name: posts_questions
+      - name: posts_answers
+      - name: tags
+      - name: users
