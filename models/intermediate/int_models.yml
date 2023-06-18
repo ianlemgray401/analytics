@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_stack_overflow_questions
+    description: "Refined data model of questions"
+  - name: int_stack_overflow_answers
+    description: "Refined data model of answers"
+  - name: int_stack_overflow_users
+    description: "Refined data model of users"
+  - name: int_stack_overflow_tags
+    description: "Refined data model of tags"

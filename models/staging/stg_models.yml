@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_stack_overflow_questions
+    description: "Log of Stack Overflow questions"
+    columns:
+      - name: id
+        description: "Primary key - unique identifier for a given question"
+        tests:
+          - unique
+          - not_null
+  - name: stg_stack_overflow_users
+    description: "Table containing attributes of users"
+    columns:
+      - name: id
+        description: "Unique ID of a given user"
+        tests:
+          - unique
+          - not_null
+  - name: stg_stack_overflow_tags
+    description: "List of tags on Stack Overflow"
+  - name: stg_stack_overflow_answers
+    description: "Log of Stack Overflow answers"
+    columns:
+      - name: id
+        description: "Primary key - unique identifier to a given answer"
+        tests:
+          - unique
+          - not_null
