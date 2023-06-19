@@ -19,13 +19,15 @@ with
             a.score as answer_score,
             a.tags as answer_tags,
             a.view_count as answer_view_count,
-            u.reputation as answer_user_reputation,
+            u.reputation as question_user_reputation,
+            u2.reputation as answer_user_reputation,
             split(q.tags, '|') as tag_name
         from {{ ref("int_stack_overflow_questions") }} q
         left join
             {{ ref("int_stack_overflow_answers") }} a
             on q.accepted_answer_id = a.answer_id
-        left join {{ ref("int_stack_overflow_users") }} u on a.owner_user_id = u.user_id
+        left join {{ ref("int_stack_overflow_users") }} u on q.owner_user_id = u.user_id
+        left join {{ ref("int_stack_overflow_users") }} u2 on a.owner_user_id = u2.user_id
     )
 
 select distinct t.* except (tag_name), tag
