@@ -25,8 +25,7 @@ with
         left join
             {{ ref("int_stack_overflow_answers") }} a
             on q.accepted_answer_id = a.answer_id
-        left join {{ ref('int_stack_overflow_users') }} u
-            on a.owner_user_id = u.user_id
+        left join {{ ref("int_stack_overflow_users") }} u on a.owner_user_id = u.user_id
     )
 
 select distinct t.* except (tag_name), tag
