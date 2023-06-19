@@ -1,9 +1,7 @@
 version: 2
 
 models:
-  - name: topics_overview_monthly
-    description: "Monthly view of question metrics by tag"
   - name: questions_and_answers
-    description: "Contains information of questions and their accepted answers - one row per question"
+    description: "Contains information of questions and their accepted answers - one row per question per tag"
   - name: user_profile
     description: "Contains information of individual users"
