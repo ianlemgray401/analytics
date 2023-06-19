@@ -17,8 +17,6 @@ models:
         tests:
           - unique
           - not_null
-  - name: stg_stack_overflow_tags
-    description: "List of tags on Stack Overflow"
   - name: stg_stack_overflow_answers
     description: "Log of Stack Overflow answers"
     columns:
