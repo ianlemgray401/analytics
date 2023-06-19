@@ -6,5 +6,4 @@ sources:
     tables:
       - name: posts_questions
       - name: posts_answers
-      - name: tags
       - name: users
