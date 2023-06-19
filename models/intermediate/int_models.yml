@@ -7,5 +7,3 @@ models:
     description: "Refined data model of answers"
   - name: int_stack_overflow_users
     description: "Refined data model of users"
-  - name: int_stack_overflow_tags
-    description: "Refined data model of tags"

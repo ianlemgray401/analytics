@@ -13,7 +13,7 @@ models:
     description: "Table containing attributes of users"
     columns:
       - name: id
-        description: "Unique ID of a given user"
+        description: "Primary key - unique ID of a given user"
         tests:
           - unique
           - not_null
